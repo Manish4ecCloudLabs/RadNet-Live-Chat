@@ -4,30 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RadNet Orange County - Medical Imaging Centers</title>
+    <script type="module" crossorigin src="/assets/index-B2TgZcfM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-K823yxAo.css">
   </head>
 
   <body>
     <div id="root"></div>
 
-    <script type="module" src="/client/main.tsx"></script>
      <script src="script.js"></script>
     <script>
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US'; // Set language
+  function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-        embeddedservice_bootstrap.init(
-          '00DVG000005T3Fu', // Org Id
-          'CustomMessagingForInAppandWeb', // Deployment Name
-          'https://radnetprm--sutherland.sandbox.my.site.com/ESWCustomMessagingForInAp1757324202673', // Deployment URL
-          {
-            scrt2URL: 'https://radnetprm--sutherland.sandbox.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    }
+			embeddedservice_bootstrap.init(
+				'00DVG000009XhCH',
+				'CustomMessagingForInAppandWeb',
+				'https://radnetprm--sutherland.sandbox.my.site.com/ESWCustomMessagingForInAp1762357821483',
+				{
+					scrt2URL: 'https://radnetprm--sutherland.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 
     // Pre-chat field prefill after widget is ready
     window.addEventListener("onEmbeddedMessagingReady", function () {
@@ -53,9 +54,6 @@
   </script>
 
   <!-- Load the MIAW bootstrap -->
-  <script type="text/javascript"
-    src="https://radnetprm--sutherland.sandbox.my.site.com/ESWCustomMessagingForInAp1757324202673/assets/js/bootstrap.min.js"
-    onload="initEmbeddedMessaging()">
-    </script>
+ <script type='text/javascript' src='https://radnetprm--sutherland.sandbox.my.site.com/ESWCustomMessagingForInAp1762357821483/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
